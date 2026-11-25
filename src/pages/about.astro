@@ -2,9 +2,125 @@
 import Site from '../layouts/Site.astro';
 ---
 <Site title="About Us">
-  <section class="reading">
+  <div class="reading">
     <h1>About Us</h1>
-    <p>We are the Accessibility and Inclusivity Working Group.</p>
-    <p><a href={import.meta.env.BASE_URL + 'people/'}>People</a></p>
-  </section>
+    <ul aria-label="On this page">
+      <li><a href="#who-we-are">Who we are</a></li>
+      <li><a href="#vision-and-objectives">Vision and objectives</a></li>
+      <li><a href="#our-people">Our people</a></li>
+      <li><a href="#achievements-and-impact">Achievements and impact</a></li>
+    </ul>
+    <section aria-labelledby="who-we-are">
+      <h2 id="who-we-are">Who we are</h2>
+      <p>Working together for a more accessible and inclusive future.</p>
+      <p>The Accessibility and Inclusion Working Group (AIWG) is a collaborative initiative within the School of Informatics at the University of Edinburgh, established in late 2022 following a recommendation from the School&#x27;s Teaching Committee.</p>
+      <p>Our work emerged from two complementary priorities:</p>
+      <ul>
+        <li>Teaching accessibly: making teaching practices, learning materials, tools and environments accessible and inclusive.</li>
+        <li>Teaching accessibility: equipping students with the knowledge and skills to develop accessible technologies and systems.</li>
+      </ul>
+      <p>We bring together academic staff, professional services colleagues, students, industry partners and people with lived experience to address accessibility barriers and promote sustainable change.</p>
+      <p>Our activities are organised around four interconnected pillars: Education, Awareness, Innovation and Collaboration, underpinned by shared responsibility and meaningful participation.</p>
+    </section>
+    <section aria-labelledby="vision-and-objectives">
+      <h2 id="vision-and-objectives">Vision and objectives</h2>
+      <h3>Our vision</h3>
+      <p>A culture in which accessibility and inclusion are fundamental to education, research, innovation and everyday academic practice, enabling everyone to participate fully and equitably.</p>
+      <h3>Our mission</h3>
+      <p>To advance accessibility and inclusion within the School of Informatics and beyond through education, awareness, innovation and meaningful collaboration.</p>
+      <h3>What accessibility means to us</h3>
+      <p>In the School of Informatics, accessibility refers to the design, development, and implementation of technologies, systems, and environments that ensure equal participation for all individuals, regardless of disability or impairment. It encompasses physical, digital, and cognitive accessibility, making informatics innovations inclusive, usable, and beneficial for diverse users.</p>
+      <h3>Our objectives</h3>
+      <h4>Education</h4>
+      <p>Embedding accessibility in how we teach and what we teach.</p>
+      <ul>
+        <li>Clarify accessibility requirements and responsibilities and support accessible teaching practices through practical guidance and resources.</li>
+        <li>Embed accessibility knowledge and skills into mainstream computer science education.</li>
+        <li>Advance evidence-informed and sustainable approaches to accessibility education.</li>
+      </ul>
+      <h4>Awareness</h4>
+      <p>Understanding barriers and learning from experience.</p>
+      <ul>
+        <li>Raise awareness of accessibility barriers and their impact on participation.</li>
+        <li>Promote learning and reflection through workshops, talks, training and lived experiences.</li>
+        <li>Foster a culture of inclusion and shared responsibility.</li>
+      </ul>
+      <h4>Innovation</h4>
+      <p>Advancing accessibility through research, creativity and technology.</p>
+      <ul>
+        <li>Encourage accessibility-focused research and student projects.</li>
+        <li>Promote responsible, user-centred and participatory approaches to technological innovation, including artificial intelligence.</li>
+        <li>Recognise and celebrate excellence in accessibility and inclusion.</li>
+      </ul>
+      <h4>Collaboration</h4>
+      <p>Building partnerships for meaningful and sustainable change.</p>
+      <ul>
+        <li>Strengthen academic, interdisciplinary and industry partnerships.</li>
+        <li>Promote meaningful participation of disabled people and community organisations.</li>
+        <li>Facilitate knowledge exchange, resource sharing and collective action.</li>
+      </ul>
+      <h3>Our guiding principles</h3>
+      <p>Accessibility by design — Considering accessibility from the beginning rather than as an afterthought.</p>
+      <p>Shared responsibility — Recognising that everyone has a role in advancing accessibility and inclusion.</p>
+      <p>Meaningful participation — Valuing the involvement, perspectives and expertise of people with lived experience.</p>
+      <p>Collaboration — Working across disciplines, professional roles, industry and communities.</p>
+      <p>Evidence-informed practice — Drawing on research, feedback and experience to inform our activities.</p>
+      <p>Sustainable change — Embedding accessibility within existing practices and processes to support long-term improvement.</p>
+    </section>
+    <section aria-labelledby="our-people">
+      <h2 id="our-people">Our people</h2>
+      <p>Different perspectives. Shared commitment. Collective action.</p>
+      <p>Our working group brings together people with diverse expertise, experiences and perspectives who share a commitment to advancing accessibility and inclusion.</p>
+      <h3>Group leadership</h3>
+      <p>Dr Aurora Constantin — Founding group leader</p>
+      <h3>Our members</h3>
+      <ul>
+        <li>Cristina Alexandru</li>
+        <li>Pavlos Andreadis</li>
+        <li>Gillian Bell</li>
+        <li>Martina Belda</li>
+        <li>Alex Burford</li>
+        <li>Tara Capel</li>
+        <li>Simonne Chung</li>
+        <li>Noela Lum Forbeteh</li>
+        <li>Nadin Kokciyan</li>
+        <li>Fiona McNeill</li>
+        <li>Snigdha Ramkumar</li>
+        <li>Kartic Subr</li>
+        <li>Heather Yorston</li>
+      </ul>
+      <p>We also value the contributions of former members, wider University colleagues, industry partners, accessibility professionals and people with lived experience who support and enrich our work.</p>
+    </section>
+    <section aria-labelledby="achievements-and-impact">
+      <h2 id="achievements-and-impact">Achievements and impact</h2>
+      <p>Turning commitment into action.</p>
+      <p>Since 2022, the AIWG has contributed to advancing accessibility and inclusion through practical initiatives, educational research, awareness activities and collaborative partnerships.</p>
+      <h3>Education</h3>
+      <ul>
+        <li>Established a shared definition and position on accessibility within the School of Informatics.</li>
+        <li>Introduced microphone-use reminder posters to promote accessible teaching and meeting practices.</li>
+        <li>Secured PTAS funding for interdisciplinary research into embedding accessibility across higher education.</li>
+      </ul>
+      <h3>Awareness</h3>
+      <ul>
+        <li>Organised accessibility awareness activities, invited talks and academic presentations.</li>
+        <li>Connected academic, industry and lived-experience perspectives to promote understanding of accessibility barriers.</li>
+      </ul>
+      <h3>Innovation</h3>
+      <ul>
+        <li>Established the Skyscanner Accessibility and Inclusion Award in 2024 to recognise outstanding student innovation.</li>
+        <li>Promoted accessibility-focused undergraduate and postgraduate research.</li>
+        <li>Developed AccessAIthon as a flagship initiative connecting accessibility, artificial intelligence and student innovation.</li>
+      </ul>
+      <h3>Collaboration</h3>
+      <ul>
+        <li>Established collaborations across Schools and professional services within the University.</li>
+        <li>Developed relationships with industry partners and accessibility professionals.</li>
+        <li>Promoted interdisciplinary research and knowledge exchange.</li>
+      </ul>
+      <h3>Looking ahead</h3>
+      <p>We aim to expand accessibility education, awareness activities, research and collaborative opportunities while continuing to develop practical resources and evaluate the impact of our initiatives.</p>
+      <p>Explore <a href={import.meta.env.BASE_URL + 'our-work/'}>Our Work</a> to discover more about our activities and flagship initiatives.</p>
+    </section>
+  </div>
 </Site>

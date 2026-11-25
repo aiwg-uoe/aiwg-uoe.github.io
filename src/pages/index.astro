@@ -1,5 +1,6 @@
 ---
 import Site from '../layouts/Site.astro';
+const base = import.meta.env.BASE_URL;
 ---
 <Site title="Accessibility and Inclusivity working group">
 <section class="hero">
@@ -11,7 +12,138 @@ import Site from '../layouts/Site.astro';
   <h2>Our Aim</h2>
   <p>We aim to remove barriers to participation and make sure the people who encounter them help shape the decisions that affect them.</p>
 </section>
-<div class="feeds"><section><div class="section-head"><h2>Events</h2><a href="events/">All events</a></div>
-<p>No events have been announced yet.</p></section>
-<section><div class="section-head"><h2>News</h2><a href="news/">All news</a></div><p>No news has been posted yet.</p></section></div>
+<section class="approach" aria-labelledby="approach-heading">
+  <h2 id="approach-heading">Our Approach</h2>
+  <p>Our work is built around four interconnected pillars, with shared responsibility and meaningful participation at the heart of everything we do.</p>
+  <div class="approach-diagram">
+    <div class="approach-centre">
+      <strong>Accessibility<br /> and Inclusion</strong>
+      <span>Shared responsibility<br />Meaningful participation</span>
+    </div>
+    <ul class="pillars">
+      <li><h3>Education</h3><p>Teaching accessibly<br />Teaching accessibility</p></li>
+      <li><h3>Awareness</h3><p>Understanding barriers<br />Learning from experience</p></li>
+      <li><h3>Innovation</h3><p>Student projects<br />Research and AI</p></li>
+      <li><h3>Collaboration</h3><p>Academic and industry partnerships<br />Community partnerships</p></li>
+    </ul>
+  </div>
+  <p class="explore"><a href={base + 'our-work/'}>Explore our work <span aria-hidden="true">→</span></a></p>
+  <div class="featured">
+    <h3>Featured Initiatives</h3>
+    <ul>
+      <li><a href={base + 'our-work/#innovation'}>AccessAIthon</a></li>
+      <li><a href={base + 'awards/'}>Skyscanner Accessibility and Inclusion Award</a></li>
+      <li><a href={base + 'our-work/#education'}>Embedding Accessibility Across Higher Education</a></li>
+    </ul>
+  </div>
+</section>
+<div class="feeds">
+  <section>
+    <h2>Latest Events &amp; News</h2>
+    <p>There are no recent announcements.</p>
+    <p class="section-head"><a href={base + 'news-events/'}>Browse news and events</a></p>
+  </section>
+  <section>
+    <h2>Latest Publications &amp; Resources</h2>
+    <p>Publications and resources have yet to be posted.</p>
+    <p class="section-head"><a href={base + 'publications-resources/'}>Browse publications and resources</a></p>
+  </section>
+</div>
 </Site>
+
+<style>
+  .approach {
+    background: #f4f0f8;
+    border-radius: 1.5rem;
+    margin-bottom: 1.25rem;
+    padding: clamp(1.2rem, 3.5vw, 2.8rem);
+  }
+  .approach-diagram {
+    display: grid;
+    margin: 1.5rem auto 0;
+    max-width: 56rem;
+  }
+  .pillars {
+    grid-area: 1 / 1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .pillars li {
+    display: grid;
+    align-content: start;
+    min-height: 12rem;
+    padding: 1.25rem 1rem 4rem;
+    text-align: center;
+    background: #ede5f6;
+    border: 1px solid #b29aca;
+    border-radius: 1rem;
+  }
+  .pillars li:nth-child(2) { background: #dfefea; border-color: #85b5aa }
+  .pillars li:nth-child(3) { background: #e8e3f6; border-color: #aaa0cb }
+  .pillars li:nth-child(4) { background: #f8edde; border-color: #c9a880 }
+  .pillars li:nth-child(n+3) {
+    align-content: end;
+    padding-block: 4rem 1.25rem;
+  }
+  .pillars h3, .featured h3 { margin: 0 }
+  .pillars p { margin: .25rem auto 0 }
+  .approach-centre {
+    grid-area: 1 / 1;
+    place-self: center;
+    z-index: 1;
+    display: grid;
+    place-content: center;
+    inline-size: 13.5rem;
+    aspect-ratio: 1;
+    padding: 1rem;
+    border: .3rem solid white;
+    border-radius: 50%;
+    background: var(--purple);
+    color: white;
+    text-align: center;
+    line-height: 1.35;
+  }
+  .approach-centre strong { font-size: 1.25rem }
+  .approach-centre span {
+    margin-top: .65rem;
+    padding-top: .65rem;
+    border-top: 1px solid #d0bcdf;
+    font-size: .9375rem;
+  }
+  .explore { max-width: none; text-align: center }
+  .featured ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .75rem;
+    list-style: none;
+    padding: 0;
+    margin: .75rem 0 0;
+  }
+  .featured a {
+    display: grid;
+    place-items: center;
+    min-height: 100%;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: .75rem;
+    background: white;
+    text-align: center;
+    font-weight: 600;
+  }
+  @media (max-width: 48rem) {
+    .approach-diagram { gap: 1rem }
+    .approach-centre, .pillars { grid-area: auto }
+    .pillars li, .pillars li:nth-child(n+3) {
+      align-content: center;
+      min-height: 0;
+      padding: 1rem .65rem;
+    }
+  }
+  @media (max-width: 32rem) {
+    .pillars, .featured ul { grid-template-columns: 1fr }
+  }
+</style>

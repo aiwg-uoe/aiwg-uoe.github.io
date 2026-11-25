@@ -1,4 +1,9 @@
 ---
 import Site from '../layouts/Site.astro';
 ---
-<Site title="People"><section class="reading"><h1>People</h1><p class="lead">Member profiles have yet to be published.</p></section></Site>
+<Site title="People">
+  <div class="reading">
+    <h1>People</h1>
+    <p><a href={import.meta.env.BASE_URL + "about/#our-people"}>Meet the working group</a>.</p>
+  </div>
+</Site>

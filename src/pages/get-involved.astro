@@ -2,8 +2,29 @@
 import Site from '../layouts/Site.astro';
 ---
 <Site title="Get Involved">
-  <section class="reading">
+  <div class="reading">
     <h1>Get Involved</h1>
-    <p>Details on how to get involved have yet to be posted here.</p>
-  </section>
+    <ul aria-label="On this page">
+      <li><a href="#opportunities-for-students">Opportunities for students</a></li>
+      <li><a href="#opportunities-for-staff-and-researchers">Opportunities for staff and researchers</a></li>
+      <li><a href="#industry-and-community-engagement">Industry and community engagement</a></li>
+      <li><a href="#contact-us">Contact us</a></li>
+    </ul>
+    <section aria-labelledby="opportunities-for-students">
+      <h2 id="opportunities-for-students">Opportunities for students</h2>
+      <p>Students can explore accessibility-focused research, AccessAIthon and the Skyscanner Accessibility and Inclusion Award in <a href={import.meta.env.BASE_URL + "our-work/#innovation"}>Innovation</a>.</p>
+    </section>
+    <section aria-labelledby="opportunities-for-staff-and-researchers">
+      <h2 id="opportunities-for-staff-and-researchers">Opportunities for staff and researchers</h2>
+      <p>Explore accessible teaching, educational research and professional development in <a href={import.meta.env.BASE_URL + "our-work/#education"}>Education</a>.</p>
+    </section>
+    <section aria-labelledby="industry-and-community-engagement">
+      <h2 id="industry-and-community-engagement">Industry and community engagement</h2>
+      <p>Find out how we work with industry partners, community organisations and people with lived experience in <a href={import.meta.env.BASE_URL + "our-work/#collaboration"}>Collaboration</a>.</p>
+    </section>
+    <section aria-labelledby="contact-us">
+      <h2 id="contact-us">Contact us</h2>
+      <p>Contact details have yet to be posted here.</p>
+    </section>
+  </div>
 </Site>

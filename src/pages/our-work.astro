@@ -2,9 +2,64 @@
 import Site from '../layouts/Site.astro';
 ---
 <Site title="Our Work">
-  <section class="reading">
+  <div class="reading">
     <h1>Our Work</h1>
-    <p>We aim to remove barriers to participation and make sure the people who encounter them help shape the decisions that affect them.</p>
-    <p><a href={import.meta.env.BASE_URL + 'awards/'}>Awards</a></p>
-  </section>
+    <ul aria-label="On this page">
+      <li><a href="#education">Education</a></li>
+      <li><a href="#awareness">Awareness</a></li>
+      <li><a href="#innovation">Innovation</a></li>
+      <li><a href="#collaboration">Collaboration</a></li>
+    </ul>
+      <p>From shared commitment to meaningful action.</p>
+      <p>We work to embed accessibility and inclusion in education, research, innovation and academic practice. Our activities are organised around four interconnected pillars, with shared responsibility and meaningful participation at the heart of our approach.</p>
+    <section aria-labelledby="education">
+      <h2 id="education">Education</h2>
+      <p>Embedding accessibility in how we teach and what we teach.</p>
+      <p>We promote accessible and inclusive learning experiences while equipping future computing professionals with the knowledge and skills to develop accessible technologies.</p>
+      <p>Our activities include:</p>
+      <ul>
+        <li>Teaching accessibly: promoting accessible teaching materials, practices and learning environments.</li>
+        <li>Teaching accessibility: embedding accessibility into mainstream computer science education.</li>
+        <li>Educational research: investigating barriers and opportunities through our PTAS-funded project, Embedding Accessibility Across Higher Education.</li>
+        <li>Professional development: supporting educators and teaching support providers through practical guidance, training and resources.</li>
+      </ul>
+    </section>
+    <section aria-labelledby="awareness">
+      <h2 id="awareness">Awareness</h2>
+      <p>Understanding barriers and learning from lived experience.</p>
+      <p>We raise awareness of accessibility barriers and encourage reflection and practical action towards a more inclusive academic culture.</p>
+      <p>Our activities include:</p>
+      <ul>
+        <li>Accessibility awareness workshops.</li>
+        <li>Invited talks, seminars and knowledge exchange.</li>
+        <li>Engagement with people with lived experience.</li>
+        <li>Initiatives promoting accessible everyday academic practices.</li>
+      </ul>
+    </section>
+    <section aria-labelledby="innovation">
+      <h2 id="innovation">Innovation</h2>
+      <p>Advancing accessibility through research, creativity and technology.</p>
+      <p>We encourage students and researchers to address real-world accessibility challenges through inclusive design, research and technological innovation.</p>
+      <p>Our key initiatives include:</p>
+      <ul>
+        <li>AccessAIthon: bringing together accessibility and artificial intelligence to address real-world challenges through student innovation.</li>
+        <li><a href={import.meta.env.BASE_URL + 'awards/'}>Skyscanner Accessibility and Inclusion Award</a>: recognising outstanding student projects that advance accessibility and inclusion.</li>
+        <li>Student project showcase: highlighting undergraduate and postgraduate accessibility-focused research.</li>
+        <li>Research and emerging technologies: encouraging the development of accessible, responsible and user-centred solutions.</li>
+      </ul>
+    </section>
+    <section aria-labelledby="collaboration">
+      <h2 id="collaboration">Collaboration</h2>
+      <p>Working together for meaningful and sustainable change.</p>
+      <p>We bring together diverse perspectives, expertise and experiences to advance accessibility and inclusion.</p>
+      <p>Our collaborations include:</p>
+      <ul>
+        <li>University collaboration: working across Schools, disciplines and professional services.</li>
+        <li>Industry partnerships: connecting education and research with professional practice through engagement with organisations such as Skyscanner, Google and User Vision.</li>
+        <li>Academic and professional networks: sharing knowledge, resources and good practice.</li>
+        <li>Community engagement: involving people with lived experience in education, research and innovation.</li>
+      </ul>
+    </section>
+    <p>Together, these four pillars support our commitment to making accessibility and inclusion an integral part of academic culture.</p>
+  </div>
 </Site>
