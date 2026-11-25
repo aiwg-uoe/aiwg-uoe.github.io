@@ -1,14 +1,24 @@
 ---
 import '../styles/site.css';
 const { title } = Astro.props;
-const routes = ['Events', 'News', 'People', 'Awards'];
 const base = import.meta.env.BASE_URL;
+const routes = [
+  { label: 'Home', path: '' },
+  { label: 'About Us', path: 'about/' },
+  { label: 'Our Work', path: 'our-work/' },
+  { label: 'Publications & Resources', path: 'publications-resources/' },
+  { label: 'News & Events', path: 'news-events/' },
+  { label: 'Get Involved', path: 'get-involved/' },
+];
+const currentPath = Astro.url.pathname.replace(/\/$/, '');
 ---
 <!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width"/><title>{title} · AIWG</title></head>
 <body><a class="skip" href="#main">Skip to content</a>
 <header><div class="wrap bar"><a class="brand" href={base}><img src={base+'AIWG.svg'} alt="AIWG home" width="850" height="300"/></a>
 <nav aria-label="Main navigation">
-<a href={base} aria-current={Astro.url.pathname === base ? "page" : undefined}>Home</a>
-{routes.map(page => <a href={base+page.toLowerCase()+'/'} aria-current={page===title?'page':undefined}>{page}</a>)}</nav></div></header>
+{routes.map(({ label, path }) => {
+  const href = base + path;
+  return <a href={href} aria-current={href.replace(/\/$/, '') === currentPath ? 'page' : undefined}>{label}</a>;
+})}</nav></div></header>
 <main class="wrap" id="main" tabindex="-1"><slot/></main>
 <footer><div class="wrap">© {new Date().getUTCFullYear()} Accessibility and Inclusivity working group. All rights reserved.</div></footer></body></html>
