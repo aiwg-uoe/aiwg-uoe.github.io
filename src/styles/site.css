@@ -1,0 +1,56 @@
+:root {
+  --ink: #20242c;
+  --muted: #484c59;
+  --purple: #563083;
+  --line: #dedee5;
+  font-family: Inter, "Helvetica Neue", system-ui, sans-serif;
+  color: var(--ink);
+}
+* { box-sizing: border-box }
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; font-size: 1.125rem; line-height: 1.6 }
+.wrap { width: min(78rem, 92%); margin-inline: auto }
+header { border-bottom: 1px solid var(--line) }
+.bar, nav, .section-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .35rem 1rem }
+.bar { padding-block: .75rem }
+.brand { display: flex; align-items: center; min-height: 44px }
+/* Align the visible mark with the page edge, accounting for its SVG canvas. */
+.brand img { width: 7rem; height: auto; margin-inline-start: -.7rem }
+nav { gap: .25rem; padding: .2rem; border-radius: 2rem; background: #f3f2f6 }
+nav a, .section-head a { display: inline-flex; min-height: 44px; align-items: center; border-radius: 2rem; padding: .45rem 1rem; font-size: 1rem; font-weight: 600 }
+a { color: var(--purple); text-underline-offset: .2em }
+nav a { padding-inline: 1.15rem; font-size: 1.0625rem; text-decoration: none; color: var(--ink) }
+nav a:hover, nav a[aria-current] { background: #e4dbee; text-decoration: underline }
+.skip { position: absolute; transform: translateY(-140%); padding: .6rem; z-index: 2; background: white }
+.skip:focus { transform: none }
+:focus-visible { outline: 3px solid #64338c; outline-offset: 3px }
+main { flex: 1 }
+.hero { margin-block: clamp(1rem, 2.6vw, 2.25rem); padding: clamp(1.4rem, 3.5vw, 3.5rem); border-radius: 2rem; background: #f4f0f8; display: grid; grid-template-columns: minmax(min-content, .92fr) 1.08fr; align-items: center; gap: clamp(1rem, 1.5vw, 1.5rem) }
+h1, h2 { margin: 0; line-height: 1.12; letter-spacing: -.035em; text-wrap: balance }
+h1 { font-size: clamp(2.15rem, 4.25vw, 4rem); font-weight: 700 }
+.group-name { width: max-content; font-family: system-ui, sans-serif; font-size: clamp(2rem, 4vw, 3.75rem); font-weight: 600; line-height: 1.14; letter-spacing: -.025em }
+.name-second { display: block; inline-size: 0; margin-inline-start: 50%; white-space: nowrap }
+.name-amp { display: inline-block; vertical-align: .22em; font-size: .64em; font-weight: 500; color: var(--purple) }
+.name-suffix { display: block; margin-top: .6em; font-size: .5em; font-weight: 500; letter-spacing: 0 }
+p { color: var(--muted); max-width: 62ch }
+.aim { background: #efeff1; display: grid; grid-template-columns: 1fr 3fr; align-items: baseline; gap: 1rem; margin-bottom: 1.25rem; padding: clamp(1.2rem, 2.4vw, 2.1rem); border-radius: 1.5rem }
+.aim p { margin: 0 }
+.hero-art { display: block; width: 100%; height: auto }
+.feeds { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.25rem; margin-bottom: 3rem }
+.feeds section { border-radius: 1.5rem; background: #edf5f5; padding: clamp(1.2rem, 2.4vw, 2.1rem) }
+.feeds section + section { background: #faf3e8 }
+.section-head a { border: 1px solid #77747d; color: var(--ink); text-decoration: none }
+.section-head a:hover { background: white; text-decoration: underline }
+h2 { font-size: clamp(1.6rem, 3vw, 2.25rem) }
+.feeds p { margin: 1.5rem 0 0 }
+.reading { margin-block: 2rem 4rem; padding: clamp(1.5rem, 5vw, 4rem); background: #f4f0f8; border-radius: 2rem }
+footer { text-align: center; border-top: 1px solid var(--line); padding: 1.4rem 0; font-size: 1rem; color: var(--muted) }
+@media (max-width: 48rem) {
+  .hero, .aim, .feeds { grid-template-columns: 1fr }
+  .hero { gap: 1.5rem }
+  .hero-art { max-width: 30rem; justify-self: center }
+}
+@media (max-width: 32rem) {
+  .bar { align-items: flex-start; flex-direction: column }
+  nav { max-width: 100%; border-radius: 1rem; justify-content: flex-start }
+  nav a { padding-inline: .65rem }
+}

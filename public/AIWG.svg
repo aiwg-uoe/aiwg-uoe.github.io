@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 300" width="100%" height="100%" role="img" aria-labelledby="logo-title logo-desc">
+                <defs>
+                    <linearGradient id="inclusiveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#EF4444" />   <!-- Red -->
+                        <stop offset="25%" stop-color="#F59E0B" />  <!-- Amber/Yellow -->
+                        <stop offset="50%" stop-color="#10B981" />  <!-- Emerald -->
+                        <stop offset="75%" stop-color="#0EA5E9" />  <!-- Sky Blue -->
+                        <stop offset="100%" stop-color="#9333EA" /> <!-- Purple -->
+                    </linearGradient>
+                </defs>
+
+                <!-- ================= 核心字母设计 ================= -->
+                
+                <g stroke-width="28" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    
+                    <!-- 字母 A (Accessibility) - 无障碍紫色代表色 -->
+                    <!-- 头部 -->
+                    <circle cx="170" cy="120" r="22" fill="#9333EA" stroke="none" />
+                    <!-- 身体和腿 (形成A的主体) -->
+                    <path d="M 170 155 L 110 270 M 170 155 L 230 270" stroke="#9333EA" />
+                    <!-- 伸展的双臂 (形成A的横杠，代表拥抱与跨越障碍) -->
+                    <path d="M 100 200 C 140 185, 200 185, 240 200" stroke="#9333EA" />
+
+                    <!-- 字母 I (Inclusivity) - 包容性黄色代表色，设计为三个多元个体的聚落 -->
+                    <g stroke-linecap="round">
+                        <!-- 左侧：代表不同年龄或特征的群体 -->
+                        <circle cx="293" cy="128" r="12" fill="#FBBF24" stroke="none" />
+                        <path d="M 293 160 L 293 270" stroke="#FBBF24" stroke-width="16" />
+                        
+                        <!-- 中间：核心支柱群体 -->
+                        <circle cx="325" cy="115" r="18" fill="#F59E0B" stroke="none" />
+                        <path d="M 325 155 L 325 270" stroke="#F59E0B" stroke-width="26" />
+                        
+                        <!-- 右侧：代表更小的个体或不同能力的群体 -->
+                        <circle cx="357" cy="138" r="10" fill="#D97706" stroke="none" />
+                        <path d="M 357 165 L 357 270" stroke="#D97706" stroke-width="14" />
+                    </g>
+
+                    <!-- 字母 W (Working) - 协作与联结 (天蓝色) -->
+                    <path d="M 415 120 L 450 270 L 485 170 L 520 270 L 555 120" stroke="#0EA5E9" />
+
+                    <!-- 字母 G (Group) - 生长与圆融 (翠绿色) -->
+                    <!-- 使用精确计算的圆弧来绘制一个完美的 G -->
+                    <path d="M 743 142 A 75 75 0 1 0 743 248 A 75 75 0 0 0 765 195 L 690 195" stroke="#10B981" />
+                    
+                </g>
+
+                <!-- ================= 辅助设计元素 ================= -->
+                
+                <!-- 包容性光谱桥梁 (Spectrum Bridge) -->
+                <path d="M 110 70 Q 432 -20 755 70" stroke="url(#inclusiveGradient)" stroke-width="12" fill="none" stroke-linecap="round" opacity="0.9"/>
+            </svg>
